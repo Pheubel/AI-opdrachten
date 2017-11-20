@@ -48,9 +48,9 @@ public class TheFlockingDead : Form
 			Matrix matrix = new Matrix();
 			matrix.RotateAt(angle, agent.Position);
 			e.Graphics.Transform = matrix;
-			if (agent.Zombie) e.Graphics.DrawImage(iconZombie, agent.Position);
-			else e.Graphics.DrawImage(iconRegular, agent.Position);
-		}
+            if (agent.Zombie) e.Graphics.DrawImage(iconZombie, new PointF(agent.Position.X - iconZombie.Width / 2, agent.Position.Y - iconZombie.Height / 2));
+            else e.Graphics.DrawImage(iconRegular, new PointF(agent.Position.X - iconRegular.Width / 2, agent.Position.Y - iconRegular.Height / 2));
+        }
 	}
 
 	private static Image CreateIcon(Brush brush)
@@ -84,7 +84,7 @@ public class Swarm
 	{
 		for (int i = 0; i < 15; i++)
 		{
-			Agents.Add(new Agent((i > 12), boundary));
+			Agents.Add(new Agent((i < 14), boundary));
 		}
 	}
 
@@ -104,9 +104,11 @@ public class Agent
 	private static float sight = 75f;
 	private static float space = 30f;
 	private static float speed = 12f;
+
     private static float separationScale = 1f;
     private static float cohesionScale = 0.05f;
     private static float alignmentScale = 0.5f;
+
     private float boundary;
 	public float dX;
 	public float dY;
