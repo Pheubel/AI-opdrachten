@@ -48,9 +48,9 @@ public class TheFlockingDead : Form
 			Matrix matrix = new Matrix();
 			matrix.RotateAt(angle, agent.Position);
 			e.Graphics.Transform = matrix;
-			if (agent.Zombie) e.Graphics.DrawImage(iconZombie, agent.Position);
-			else e.Graphics.DrawImage(iconRegular, agent.Position);
-		}
+            if (agent.Zombie) e.Graphics.DrawImage(iconZombie, new PointF(agent.Position.X - iconZombie.Width / 2, agent.Position.Y - iconZombie.Height / 2));
+            else e.Graphics.DrawImage(iconRegular, new PointF(agent.Position.X - iconRegular.Width / 2, agent.Position.Y - iconRegular.Height / 2));
+        }
 	}
 
 	private static Image CreateIcon(Brush brush)
@@ -84,7 +84,7 @@ public class Swarm
 	{
 		for (int i = 0; i < 15; i++)
 		{
-			Agents.Add(new Agent((i > 12), boundary));
+			Agents.Add(new Agent((i < 14), boundary));
 		}
 	}
 
@@ -104,7 +104,12 @@ public class Agent
 	private static float sight = 75f;
 	private static float space = 30f;
 	private static float speed = 12f;
-	private float boundary;
+
+    private static float separationScale = 1f;
+    private static float cohesionScale = 0.05f;
+    private static float alignmentScale = 0.5f;
+
+    private float boundary;
 	public float dX;
 	public float dY;
 	public bool Zombie;
@@ -138,27 +143,27 @@ public class Agent
 				if (distance < space)
 				{
 					// Separation
-					dX += Position.X - a.Position.X;
-					dY += Position.Y - a.Position.Y;
+					dX += (Position.X - a.Position.X) * separationScale;
+					dY += (Position.Y - a.Position.Y) * separationScale;
 				}
 				else if (distance < sight)
 				{
-					// Cohesion
-					//dX += TODO
-					//dY += TODO
+                    // Cohesion
+                    dX += (a.Position.X - Position.X) * cohesionScale;
+                    dY += (a.Position.Y - Position.Y) * cohesionScale;
 				}
 				if (distance < sight)
 				{
-					// Alignment
-					//dX += TODO
-					//dY += TODO
+                    // Alignment
+                    dX += a.dX * alignmentScale;
+                    dY += a.dY * alignmentScale;
 				}
 			}
 			if (a.Zombie && distance < sight)
 			{
-				// Evade
-				//dX += TODO
-				//dY += TODO
+                // Evade
+                dX += Position.X - a.Position.X;
+                dY += Position.Y - a.Position.Y;
 			}
 		}
 	}
