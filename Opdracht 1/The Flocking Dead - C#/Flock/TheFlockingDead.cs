@@ -104,7 +104,9 @@ public class Agent
 	private static float sight = 75f;
 	private static float space = 30f;
 	private static float speed = 12f;
-	private float boundary;
+    private static float seperationScale = 2f;
+    private static float cohesionScale = 2f;
+    private float boundary;
 	public float dX;
 	public float dY;
 	public bool Zombie;
@@ -119,9 +121,8 @@ public class Agent
 
 	public void Move(List<Agent> agents)
 	{
-        float scale = 1;
         //Agents flock, zombie's hunt 
-		if (!Zombie) Flock(agents, scale);
+		if (!Zombie) Flock(agents);
 		else Hunt(agents);
 		CheckBounds();
 		CheckSpeed();
@@ -129,7 +130,7 @@ public class Agent
 		Position.Y += dY;
 	}
 
-	private void Flock(List<Agent> agents, float scale)
+	private void Flock(List<Agent> agents)
 	{
 		foreach (Agent a in agents)
 		{
@@ -139,14 +140,14 @@ public class Agent
 				if (distance < space)
 				{
 					// Separation
-					dX += Position.X - a.Position.X;
-					dY += Position.Y - a.Position.Y;
+					dX += (Position.X - a.Position.X) * seperationScale;
+					dY += (Position.Y - a.Position.Y) * seperationScale;
 				}
 				else if (distance < sight)
 				{
                     // Cohesion
-                    //dX += a.Position.X;
-					//dY += 
+                    dX += (a.Position.X - Position.X) * cohesionScale;
+                    dY += (a.Position.Y - Position.Y) * cohesionScale;
 				}
 				if (distance < sight)
 				{
