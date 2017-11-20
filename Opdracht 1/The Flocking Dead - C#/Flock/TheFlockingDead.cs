@@ -104,8 +104,9 @@ public class Agent
 	private static float sight = 75f;
 	private static float space = 30f;
 	private static float speed = 12f;
-    private static float seperationScale = 2f;
-    private static float cohesionScale = 2f;
+    private static float separationScale = 1f;
+    private static float cohesionScale = 0.05f;
+    private static float alignmentScale = 0.5f;
     private float boundary;
 	public float dX;
 	public float dY;
@@ -140,8 +141,8 @@ public class Agent
 				if (distance < space)
 				{
 					// Separation
-					dX += (Position.X - a.Position.X) * seperationScale;
-					dY += (Position.Y - a.Position.Y) * seperationScale;
+					dX += (Position.X - a.Position.X) * separationScale;
+					dY += (Position.Y - a.Position.Y) * separationScale;
 				}
 				else if (distance < sight)
 				{
@@ -151,9 +152,9 @@ public class Agent
 				}
 				if (distance < sight)
 				{
-					// Alignment
-					//dX += TODO
-					//dY += TODO
+                    // Alignment
+                    dX += a.dX * alignmentScale;
+                    dY += a.dY * alignmentScale;
 				}
 			}
 			if (a.Zombie && distance < sight)
