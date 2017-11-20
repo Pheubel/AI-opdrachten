@@ -156,9 +156,9 @@ public class Agent
 			}
 			if (a.Zombie && distance < sight)
 			{
-				// Evade
-				//dX += TODO
-				//dY += TODO
+                // Evade
+                dX += Position.X - a.Position.X;
+                dY += Position.Y - a.Position.Y;
 			}
 		}
 	}
@@ -186,7 +186,6 @@ public class Agent
             dY += prey.Position.Y - Position.Y;
         }
 	}
-    //djfhbdsjgdjjbdsfjh
 
 	private static float Distance(PointF p1, PointF p2)
 	{
