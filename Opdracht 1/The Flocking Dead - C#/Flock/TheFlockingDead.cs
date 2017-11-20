@@ -119,8 +119,9 @@ public class Agent
 
 	public void Move(List<Agent> agents)
 	{
+        float scale = 1;
         //Agents flock, zombie's hunt 
-		if (!Zombie) Flock(agents);
+		if (!Zombie) Flock(agents, scale);
 		else Hunt(agents);
 		CheckBounds();
 		CheckSpeed();
@@ -128,7 +129,7 @@ public class Agent
 		Position.Y += dY;
 	}
 
-	private void Flock(List<Agent> agents)
+	private void Flock(List<Agent> agents, float scale)
 	{
 		foreach (Agent a in agents)
 		{
@@ -143,9 +144,9 @@ public class Agent
 				}
 				else if (distance < sight)
 				{
-					// Cohesion
-					//dX += TODO
-					//dY += TODO
+                    // Cohesion
+                    //dX += a.Position.X;
+					//dY += 
 				}
 				if (distance < sight)
 				{
