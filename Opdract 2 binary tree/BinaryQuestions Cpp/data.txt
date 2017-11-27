@@ -1,0 +1,7 @@
+0?2,1,is it alive?
+1?5,6,does it have legs?
+2?3,4,does it have 4 legs?
+3:cat
+4:ant
+5:table
+6:cookie
