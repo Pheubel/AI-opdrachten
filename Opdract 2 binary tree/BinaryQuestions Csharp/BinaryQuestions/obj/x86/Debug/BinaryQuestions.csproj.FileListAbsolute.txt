@@ -9,3 +9,9 @@ C:\Users\Pheubel\Desktop\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\Bi
 C:\Users\Pheubel\Desktop\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
 C:\Users\Pheubel\Desktop\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
 C:\Users\Pheubel\Desktop\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\bin\Debug\BinaryQuestions.exe
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\bin\Debug\BinaryQuestions.pdb
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csprojResolveAssemblyReference.cache
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.csproj.CoreCompileInputs.cache
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.exe
+C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdract 2 binary tree\BinaryQuestions Csharp\BinaryQuestions\obj\x86\Debug\BinaryQuestions.pdb

@@ -10,7 +10,7 @@ namespace BinaryQuestions
 {
     [Serializable] class BTTree
     {
-        BTNode rootNode;
+        public BTNode rootNode;
 
         public BTTree(string question, string yesGuess, string noGuess)
         {

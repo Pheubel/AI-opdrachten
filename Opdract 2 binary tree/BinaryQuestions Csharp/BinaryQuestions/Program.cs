@@ -10,6 +10,28 @@ namespace BinaryQuestions
 {
     class Program
     {
+        static void ReturnPreOrder(BTNode rootNode)
+        {
+            Console.WriteLine(rootNode.getMessage());
+
+            if (rootNode.getYesNode() != null) ReturnPreOrder(rootNode.getYesNode());
+            if (rootNode.getNoNode() != null) ReturnPreOrder(rootNode.getNoNode());
+        }
+
+        static void ReturnInorder(BTNode rootNode)
+        {
+            if (rootNode.getYesNode() != null) ReturnInorder(rootNode.getYesNode());
+            Console.WriteLine(rootNode.getMessage());
+            if (rootNode.getNoNode() != null) ReturnInorder(rootNode.getNoNode());
+        }
+
+        static void ReturnPostorder(BTNode rootNode)
+        {
+            if (rootNode.getYesNode() != null) ReturnPostorder(rootNode.getYesNode());
+            if (rootNode.getNoNode() != null) ReturnPostorder(rootNode.getNoNode());
+            Console.WriteLine(rootNode.getMessage());
+        }
+
         static BTTree tree;
         static void Main(string[] args)
         {
@@ -18,6 +40,13 @@ namespace BinaryQuestions
                 tree = new BTTree();
             else
                 startNewGame();
+
+
+            // ReturnInorder(tree.rootNode);
+            //ReturnPreOrder(tree.rootNode);
+            ReturnPostorder(tree.rootNode);
+
+
 
             Console.WriteLine("\nStarting the \"20 Binary Questions\" Game!\nThink of an object, person or animal.");
             tree.query(); //play one game
