@@ -5,11 +5,13 @@ using System.Text;
 
 namespace BinaryQuestions
 {
-    [Serializable] class BTNode
+    [Serializable]
+    class BTNode
     {
         string message;
         BTNode noNode;
         BTNode yesNode;
+        int score;
 
         /**
          * Constructor for the nodes: This class holds an String representing 
@@ -23,6 +25,8 @@ namespace BinaryQuestions
             yesNode = null;
         }
 
+
+
         public void query(int q)
         {
             if (q > 20)
@@ -35,9 +39,9 @@ namespace BinaryQuestions
                 Console.Write("Enter 'y' for yes and 'n' for no: ");
                 char input = getYesOrNo(); //y or n
                 if (input == 'y')
-                    yesNode.query(q+1);
+                    yesNode.query(q + 1);
                 else
-                    noNode.query(q+1);
+                    noNode.query(q + 1);
             }
             else
                 this.onQueryObject(q);
@@ -131,5 +135,59 @@ namespace BinaryQuestions
         {
             return yesNode;
         }
+
+        public static void NodeValue(BTNode node)
+        {
+            if (node.yesNode == null && node.noNode == null)
+            {
+                node.score = node.message.Length;
+                Console.WriteLine($"{node.message} score: {node.score}");
+            }
+            else
+            {
+                // not null
+                if (node.yesNode != null)
+                    NodeValue(node.yesNode);
+
+                // not null?
+                if (node.noNode != null)
+                    NodeValue(node.noNode);
+            }
+
+        }
+
+        public static int MinMax(BTNode node, bool aiAanZet = true)
+        {
+            if (node.yesNode == null && node.noNode == null)
+            {
+                node.score = node.message.Length;
+                //Console.WriteLine($"{node.message} score: {node.score}");
+                return node.score;
+            }
+            else
+            {
+                if (node.yesNode == null) return MinMax(node.noNode, !aiAanZet);
+                else if (node.noNode == null) return MinMax(node.yesNode, !aiAanZet);
+                else if (MinMax(node.yesNode, !aiAanZet) >= MinMax(node.noNode, !aiAanZet))
+                {
+                    if (aiAanZet)
+                        return MinMax(node.yesNode, !aiAanZet);
+                    else
+                        return MinMax(node.noNode, !aiAanZet);
+                }
+                else
+                    if (!aiAanZet)
+                    {
+                    return MinMax(node.yesNode, !aiAanZet);
+
+                    }
+                    else
+                    {
+                    return MinMax(node.noNode, !aiAanZet);
+
+                    }
+            }
+        }
+
     }
 }

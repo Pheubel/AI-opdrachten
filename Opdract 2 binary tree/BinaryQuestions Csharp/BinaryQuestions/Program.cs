@@ -10,6 +10,8 @@ namespace BinaryQuestions
 {
     class Program
     {
+        
+
         static void ReturnPreOrder(BTNode rootNode)
         {
             Console.WriteLine(rootNode.getMessage());
@@ -42,9 +44,13 @@ namespace BinaryQuestions
                 startNewGame();
 
 
-            // ReturnInorder(tree.rootNode);
+            //ReturnInorder(tree.rootNode);
             //ReturnPreOrder(tree.rootNode);
-            ReturnPostorder(tree.rootNode);
+            //ReturnPostorder(tree.rootNode);
+
+            BTNode.NodeValue(tree.rootNode);
+            BTNode.MinMax(tree.rootNode);
+
 
 
 
