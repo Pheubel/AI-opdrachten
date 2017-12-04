@@ -166,26 +166,49 @@ namespace BinaryQuestions
             }
             else
             {
-                if (node.yesNode == null) return MinMax(node.noNode, !aiAanZet);
-                else if (node.noNode == null) return MinMax(node.yesNode, !aiAanZet);
+                int resultMinMax;
+
+                if (node.yesNode == null)
+                {
+                    resultMinMax = MinMax(node.noNode, !aiAanZet);
+                    Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                    return resultMinMax;
+                }
+                else if (node.noNode == null)
+                {
+                    resultMinMax = MinMax(node.yesNode, !aiAanZet);
+                    Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                    return resultMinMax;
+                }
                 else if (MinMax(node.yesNode, !aiAanZet) >= MinMax(node.noNode, !aiAanZet))
                 {
                     if (aiAanZet)
-                        return MinMax(node.yesNode, !aiAanZet);
+                    {
+                        resultMinMax = MinMax(node.yesNode, !aiAanZet);
+                        Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                        return resultMinMax;
+                    }
                     else
-                        return MinMax(node.noNode, !aiAanZet);
+                    {
+                        resultMinMax = MinMax(node.noNode, !aiAanZet);
+                        Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                        return resultMinMax;
+                    }
                 }
                 else
                     if (!aiAanZet)
-                    {
-                    return MinMax(node.yesNode, !aiAanZet);
+                {
+                    resultMinMax = MinMax(node.yesNode, !aiAanZet);
+                    Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                    return resultMinMax;
 
-                    }
-                    else
-                    {
-                    return MinMax(node.noNode, !aiAanZet);
-
-                    }
+                }
+                else
+                {
+                    resultMinMax = MinMax(node.noNode, !aiAanZet);
+                    Console.WriteLine($"{node.message} resultaat MinMax: {resultMinMax}");
+                    return resultMinMax;
+                }
             }
         }
 

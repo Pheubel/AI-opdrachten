@@ -49,6 +49,8 @@ namespace BinaryQuestions
             //ReturnPostorder(tree.rootNode);
 
             BTNode.NodeValue(tree.rootNode);
+            Console.WriteLine();
+
             BTNode.MinMax(tree.rootNode);
 
 
