@@ -212,5 +212,27 @@ namespace BinaryQuestions
             }
         }
 
+        public static void AlphaBeta(BTNode node, bool aiAanzet)
+        {
+
+            if (node.yesNode == null && node.noNode == null)
+            {
+                node.score = node.message.Length;
+            }
+            if (aiAanzet)
+            {
+                Math.Max(node.yesNode.score, node.noNode.score);
+                
+                
+            }
+            if (!aiAanzet)
+            {
+                Math.Min(node.yesNode.score, node.noNode.score);
+            }
+
+        }
+
+
+
     }
 }
