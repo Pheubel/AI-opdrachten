@@ -22,44 +22,44 @@ namespace TilesOfMonkeyIsland.Searcher
             this.nodesExpanded = 0;
         }
 
-        /**
-         * This constructor immediately initializes the class attributes.
-         * 
-         * @param bestPathCost The cost of the best path
-         * @param nodesExpanded Number of expanded nodes
-         */
+
+        /// <summary>
+        /// This constructor immediately initializes the class attributes.
+        /// </summary>
+        /// <param name="bestPathCost">The cost of the best path</param>
+        /// <param name="nodesExpanded">Number of expanded nodes</param>
         public AlgorithmResults(int bestPathCost, int nodesExpanded)
         {
             this.bestPathCost = bestPathCost;
             this.nodesExpanded = nodesExpanded;
         }
 
-        public int getBestPathCost()
+        public int GetBestPathCost()
         {
             return bestPathCost;
         }
 
-        public void setBestPathCost(int cost)
+        public void SetBestPathCost(int cost)
         {
             this.bestPathCost = cost;
         }
 
-        public int getNodesExpanded()
+        public int GetNodesExpanded()
         {
             return nodesExpanded;
         }
 
-        public void setNodesExpanded(int nodesExpanded)
+        public void SetNodesExpanded(int nodesExpanded)
         {
             this.nodesExpanded = nodesExpanded;
         }
 
-        public ArrayList getSolutionPath()
+        public ArrayList GetSolutionPath()
         {
             return solutionPath;
         }
 
-        public void setSolutionPath(ArrayList solutionPath)
+        public void SetSolutionPath(ArrayList solutionPath)
         {
             this.solutionPath = solutionPath;
         }

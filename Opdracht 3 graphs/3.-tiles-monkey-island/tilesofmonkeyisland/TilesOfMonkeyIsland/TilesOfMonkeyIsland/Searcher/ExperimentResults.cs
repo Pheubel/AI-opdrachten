@@ -17,9 +17,10 @@ namespace TilesOfMonkeyIsland.Searcher
         private AlgorithmResults dijkstra;
         private AlgorithmResults bfsSearch;
 
-        /**
-         * Initializes the three algorithm results.
-         */
+        
+        /// <summary>
+        /// Initializes the three algorithm results.
+        /// </summary>
         public ExperimentResults()
         {
             aStar = new AlgorithmResults();
@@ -27,32 +28,32 @@ namespace TilesOfMonkeyIsland.Searcher
             bfsSearch = new AlgorithmResults();
         }
 
-        public AlgorithmResults getaStar()
+        public AlgorithmResults GetaStar()
         {
             return aStar;
         }
 
-        public void setaStar(AlgorithmResults aStar)
+        public void SetaStar(AlgorithmResults aStar)
         {
             this.aStar = aStar;
         }
 
-        public AlgorithmResults getDijkstra()
+        public AlgorithmResults GetDijkstra()
         {
             return dijkstra;
         }
 
-        public void setDijkstra(AlgorithmResults dijkstra)
+        public void SetDijkstra(AlgorithmResults dijkstra)
         {
             this.dijkstra = dijkstra;
         }
 
-        public AlgorithmResults getBFSSearch()
+        public AlgorithmResults GetBFSSearch()
         {
             return bfsSearch;
         }
 
-        public void setBFSSearch(AlgorithmResults bfsSearch)
+        public void SetBFSSearch(AlgorithmResults bfsSearch)
         {
             this.bfsSearch = bfsSearch;
         }

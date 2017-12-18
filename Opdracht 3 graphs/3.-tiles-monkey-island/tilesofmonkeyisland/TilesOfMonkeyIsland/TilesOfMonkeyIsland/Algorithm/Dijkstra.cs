@@ -13,7 +13,7 @@ namespace TilesOfMonkeyIsland.Algorithm
             : base(world)
         {}
 
-        override protected float calculateHeuristic(Node node)
+        override protected float CalculateHeuristic(Node node)
         {
             // Get the cost.
             float cost = node.cost;
@@ -25,9 +25,9 @@ namespace TilesOfMonkeyIsland.Algorithm
         /**
          * Dijkstra is finished when there is no other path open with a lower cost than the solution path.
          */
-        override protected bool done()
+        override protected bool Done()
         {
-            return this.pickLowestHeuristicValue() == goalNode;
+            return this.PickLowestHeuristicValue() == goalNode;
         }
     }
 }

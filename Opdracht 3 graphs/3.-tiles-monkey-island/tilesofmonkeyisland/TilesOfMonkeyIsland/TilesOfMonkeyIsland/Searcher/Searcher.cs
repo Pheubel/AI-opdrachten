@@ -104,24 +104,24 @@ namespace TilesOfMonkeyIsland.Searcher
 
             // Dijkstra
             Dijkstra dijkstraAlgorithm = new Algorithm.Dijkstra(new TileWorld.TileWorld(map));
-            AlgorithmResults dijkstra = dijkstraAlgorithm.run();
+            AlgorithmResults dijkstra = dijkstraAlgorithm.Run();
 
-            info.setDijkstra(dijkstra);
-            SaveImage(filename + "_dijkstra", dijkstraAlgorithm.getMap());
+            info.SetDijkstra(dijkstra);
+            SaveImage(filename + "_dijkstra", dijkstraAlgorithm.GetMap());
 
             // A*
             AStar aStarAlgorithm = new AStar(new TileWorld.TileWorld(map));
-            AlgorithmResults aStar = aStarAlgorithm.run();
+            AlgorithmResults aStar = aStarAlgorithm.Run();
 
-            info.setaStar(aStar);
-            SaveImage(filename + "_aStar", aStarAlgorithm.getMap());
+            info.SetaStar(aStar);
+            SaveImage(filename + "_aStar", aStarAlgorithm.GetMap());
 
             // BFS Search
             BFS bfsAlgorithm = new BFS(new TileWorld.TileWorld(map));
-            AlgorithmResults bfsSearch = bfsAlgorithm.run();
+            AlgorithmResults bfsSearch = bfsAlgorithm.Run();
 
-            info.setBFSSearch(bfsSearch);
-            SaveImage(filename + "_bfs", bfsAlgorithm.getMap());
+            info.SetBFSSearch(bfsSearch);
+            SaveImage(filename + "_bfs", bfsAlgorithm.GetMap());
 
             return info;
         }
@@ -136,11 +136,11 @@ namespace TilesOfMonkeyIsland.Searcher
             Console.WriteLine("#######################");
             Console.WriteLine("Testcase: " + filename);
             Console.WriteLine("#######################");
-            PrintAlgorithmResult("A*", info.getaStar());
+            PrintAlgorithmResult("A*", info.GetaStar());
             Console.WriteLine("-------------------------------------");
-            PrintAlgorithmResult("Dijkstra", info.getDijkstra());
+            PrintAlgorithmResult("Dijkstra", info.GetDijkstra());
             Console.WriteLine("-------------------------------------");
-            PrintAlgorithmResult("BFS", info.getBFSSearch());
+            PrintAlgorithmResult("BFS", info.GetBFSSearch());
         }
 
 
@@ -208,8 +208,8 @@ namespace TilesOfMonkeyIsland.Searcher
                 Console.WriteLine("No results found.");
                 return;
             }
-            Console.WriteLine("#nodes: " + info.getNodesExpanded());
-            Console.WriteLine("#path cost: " + info.getBestPathCost());
+            Console.WriteLine("#nodes: " + info.GetNodesExpanded());
+            Console.WriteLine("#path cost: " + info.GetBestPathCost());
         }
     }
 }

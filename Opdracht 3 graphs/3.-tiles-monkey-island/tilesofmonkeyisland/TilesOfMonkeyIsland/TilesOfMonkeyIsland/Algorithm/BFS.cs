@@ -13,7 +13,7 @@ namespace TilesOfMonkeyIsland.Algorithm
             : base(world)
         { }
 
-        override protected float calculateHeuristic(Node node)
+        override protected float CalculateHeuristic(Node node)
         {
             // Calculate the minimal distance walking horizontally / vertically and diagonally.
             float distanceX = Math.Abs(node.x - this.goalNode.x);
