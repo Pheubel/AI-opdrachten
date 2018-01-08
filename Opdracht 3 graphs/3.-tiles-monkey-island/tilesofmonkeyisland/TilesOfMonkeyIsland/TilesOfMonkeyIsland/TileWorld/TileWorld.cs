@@ -75,15 +75,19 @@ namespace TilesOfMonkeyIsland.TileWorld
             return world;
         }
 
-        private void clear() {
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
+        private void clear()
+        {
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
                     world[x, y] = eTileType.ROAD;
                 }
             }
         }
 
-        public int getWidth() {
+        public int getWidth()
+        {
             return width;
         }
 
@@ -94,16 +98,20 @@ namespace TilesOfMonkeyIsland.TileWorld
 
         public eTileType getTileType(int x, int y)
         {
-            if (world == null) {
+            if (world == null)
+            {
                 return eTileType.UNKNOWN;
-            } else {
-                return world[x,y];
+            }
+            else
+            {
+                return world[x, y];
             }
         }
 
         public void setTileType(int x, int y, eTileType type)
         {
-            if (world != null) {
+            if (world != null)
+            {
                 world[x, y] = type;
             }
         }
@@ -113,7 +121,8 @@ namespace TilesOfMonkeyIsland.TileWorld
             this.blockSize = blockSize;
         }
 
-        public int twoDimIndexToOneDimIndex(int x, int y) {
+        public int twoDimIndexToOneDimIndex(int x, int y)
+        {
             return y * width + x;
         }
 
@@ -136,16 +145,21 @@ namespace TilesOfMonkeyIsland.TileWorld
         {
             return findIndexContainingType(eTileType.END);
         }
-        
-        /**
-         * Searches the tile world for a tile with a given type.
-         * 
-         * @return The one-dimensional index of the first tile with the given type. If it has not been found, NO_INDEX is returned.
-         */
-        private int findIndexContainingType(eTileType type) {
-            for (int x = 0; x < getWidth(); x++) {
-                for (int y = 0; y < getHeight(); y++) {
-                    if (getTileType(x, y) == type) {
+
+
+        /// <summary>
+        /// Searches the tile world for a tile with a given type.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns>The one-dimensional index of the first tile with the given type. If it has not been found, NO_INDEX is returned.</returns>
+        private int findIndexContainingType(eTileType type)
+        {
+            for (int x = 0; x < getWidth(); x++)
+            {
+                for (int y = 0; y < getHeight(); y++)
+                {
+                    if (getTileType(x, y) == type)
+                    {
                         return twoDimIndexToOneDimIndex(x, y);
                     }
                 }
