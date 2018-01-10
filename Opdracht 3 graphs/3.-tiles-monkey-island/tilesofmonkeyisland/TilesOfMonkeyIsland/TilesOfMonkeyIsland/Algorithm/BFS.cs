@@ -20,14 +20,9 @@ namespace TilesOfMonkeyIsland.Algorithm
             float distanceY = Math.Abs(node.y - this.goalNode.y);
             float distance;
 
-            if (distanceX >= distanceY)
-            {
-                distance = (distanceX - distanceY) + distanceY * 1.4f;
-            }
-            else
-            {
-                distance = (distanceY - distanceX) + distanceX * 1.4f;
-            }
+            distance = (float)Math.Sqrt(distanceX * distanceX + distanceY * distanceY);
+
+            
 
             // Return the heuristic.
             return distance;
