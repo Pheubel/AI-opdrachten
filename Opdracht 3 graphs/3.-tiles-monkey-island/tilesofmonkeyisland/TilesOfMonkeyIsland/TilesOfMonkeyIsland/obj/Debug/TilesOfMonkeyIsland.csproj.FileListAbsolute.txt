@@ -10,3 +10,9 @@ C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monke
 C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\Pathfinding.exe
 C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\Pathfinding.pdb
 C:\Users\Pheubel\Documents\GitHub\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\TilesOfMonkeyIsland.csprojResolveAssemblyReference.cache
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\bin\Debug\Pathfinding.exe.config
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\bin\Debug\Pathfinding.exe
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\bin\Debug\Pathfinding.pdb
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\TilesOfMonkeyIsland.csprojResolveAssemblyReference.cache
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\Pathfinding.exe
+C:\Users\Alan\Documents\HVA Leerjaar 2\AI\AI-opdrachten\Opdracht 3 graphs\3.-tiles-monkey-island\tilesofmonkeyisland\TilesOfMonkeyIsland\TilesOfMonkeyIsland\obj\Debug\Pathfinding.pdb
