@@ -12,7 +12,6 @@ namespace TilesOfMonkeyIsland.Algorithm
             : base(world)
         {}
         
-        // TO CHANGE 
         override protected float CalculateHeuristic(Node node)
         {
             // Calculate the minimal distance walking horizontally / vertically and diagonally.
@@ -29,11 +28,15 @@ namespace TilesOfMonkeyIsland.Algorithm
                 distance = (distanceY - distanceX) + distanceX * 1.4f;
             }
 
-            // Get the cost.
-            float cost = node.cost;
+            var cost = node.cost;
 
             // Return the heuristic.
-            return cost-distance;
+            return cost + distance;
+        }
+
+        override protected bool Done()
+        {
+            return this.PickLowestHeuristicValue() == goalNode;
         }
     }
 }
